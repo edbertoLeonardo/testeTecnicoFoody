@@ -1,0 +1,309 @@
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: #f5f6fa;
+}
+
+.header {
+  background-color: #e85d04;
+  color: white;
+  padding: 24px 8%;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.header p {
+  margin-bottom: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.welcome,
+.pedidos {
+  background-color: white;
+  padding: 28px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.welcome h2,
+.pedidos h2 {
+  color: #252525;
+}
+
+.btn-primary {
+  background-color: #e85d04;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.btn-primary:hover {
+  background-color: #c94d00;
+}
+
+.mensagem {
+  color: #666;
+  padding: 16px 0;
+}
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background-color: #f5f6fa;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background-color: white;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.auth-card h1 {
+  text-align: center;
+  color: #e85d04;
+  margin-top: 0;
+}
+
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.form-group input:focus {
+  outline: 2px solid #e85d04;
+  border-color: transparent;
+}
+
+.auth-card .btn-primary {
+  width: 100%;
+}
+
+.auth-link {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+.auth-link a {
+  color: #e85d04;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.auth-link a:hover {
+  text-decoration: underline;
+}
+
+/* ==============================
+   TELA DE PEDIDOS
+============================== */
+
+.pedidos-container {
+  min-height: 100vh;
+  padding: 32px 20px;
+  background-color: #f5f6fa;
+}
+
+.pedidos-container>header {
+  max-width: 1000px;
+  margin: 0 auto 32px;
+}
+
+.pedidos-container>header h1 {
+  color: #e85d04;
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.pedidos-container>header h2 {
+  color: #252525;
+  margin-bottom: 8px;
+}
+
+.pedidos-container>header p {
+  color: #666;
+}
+
+.pedidos-lista {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* Cartão de cada pedido */
+
+.pedido-card {
+  background-color: white;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #eeeeee;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow-wrap: anywhere;
+}
+
+.pedido-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
+}
+
+.pedido-card h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #252525;
+  font-size: 21px;
+}
+
+.pedido-card h4 {
+  margin-top: 24px;
+  margin-bottom: 12px;
+  color: #444;
+}
+
+.pedido-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.pedido-card ul {
+  padding-left: 20px;
+  color: #555;
+}
+
+.pedido-card li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+/* Status dos pedidos */
+
+.pedido-card p strong {
+  color: #333;
+}
+
+/* Mensagens de carregamento e lista vazia */
+
+.pedidos-container>p {
+  max-width: 1000px;
+  margin: 20px auto;
+  color: #666;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Responsividade */
+
+@media (max-width: 600px) {
+  .pedidos-container {
+    padding: 24px 16px;
+  }
+
+  .pedidos-container>header h1 {
+    font-size: 28px;
+  }
+
+  .pedidos-lista {
+    grid-template-columns: 1fr;
+  }
+
+  .pedido-card {
+    padding: 20px;
+  }
+}
+
+/* Status dos pedidos */
+
+.pedido-status {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+
+/* Pedido recebido */
+
+.status-recebido {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+/* Pedido em preparação */
+
+.status-em_preparo {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+/* Pedido saiu para entrega */
+
+.status-saiu_para_entrega {
+  background-color: #ede7f6;
+  color: #6a1b9a;
+}
+
+/* Pedido entregue */
+
+.status-entregue {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+/* Pedido cancelado */
+
+.status-cancelado {
+  background-color: #ffebee;
+  color: #c62828;
+}
